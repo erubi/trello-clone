@@ -16,7 +16,7 @@ end
 
 cards ||= nil
 unless cards.nil?
-  json.cards(cards) do |cards|
-    json.partial!("api/cards/cards", :cards => cards)
+  json.cards(cards) do |card|
+    json.partial!("api/cards/card", :card => card)
   end
 end
