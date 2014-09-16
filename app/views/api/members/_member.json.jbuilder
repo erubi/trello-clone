@@ -1,0 +1,1 @@
+json.(member, :id, :email, :gravatar_url, :created_at, :updated_at)
