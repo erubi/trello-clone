@@ -1,0 +1,10 @@
+<h3>My Boards</h3>
+
+
+<ul class="boards-ul">
+  <% boards.each(function(board){ %>
+    <li>
+      <%= board.get("title") %>
+    </li>
+  <% }) %>
+</ul>
