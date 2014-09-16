@@ -1,10 +1,12 @@
-<h3>My Boards</h3>
+<h3 class="organization-h3">My Boards</h3>
 
 
 <ul class="boards-ul">
   <% boards.each(function(board){ %>
     <li>
+      <a href="#/boards/<%= board.id %>">
       <%= board.get("title") %>
+      </a>
     </li>
   <% }) %>
 </ul>

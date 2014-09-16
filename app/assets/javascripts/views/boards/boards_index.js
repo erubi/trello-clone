@@ -3,6 +3,9 @@ TrelloClone.Views.BoardsIndex = Backbone.View.extend({
   
   className: "boards-index",
   
+  events: {
+  }
+  
   initialize: function(){
   },
   

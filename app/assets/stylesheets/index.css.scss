@@ -1,0 +1,25 @@
+.organization-h3{
+  margin-left: 30px;
+}
+
+.boards-ul{
+  @include span-columns(12);
+  margin-left: 30px;
+  
+  li{
+    @include span-columns(3);
+    width: 325px;
+    height: 105px;
+    background: #1D5F86;
+    border-radius: 3px;
+    padding: 10px;
+    font-weight: bold;
+    color: #fff;
+    
+    &:hover{
+     background: #195477; 
+     cursor: pointer;
+    }
+  }
+  
+}
