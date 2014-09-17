@@ -1,23 +1,44 @@
+
+
 .lists-show-el{
+  position: relative;
   background: #E3E3E3;
-  @include span-columns(1);
+  @include span-columns(1 of 12);
   width: 260px; 
-  @include omega(4n);
   border-radius: 5px;
-  padding: 8px;
-  
   h3 {
     font-size: 15px;
   }
   
   a {
+    position:relative;
+    bottom: 0;
     color: #939393;
     font-size: 14px;
     font-weight: normal;
+
     
     &:hover{
       color: #222222;
       cursor: pointer;
     }
+  }
+}
+
+.list-title{
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.add-card-li{
+  position: relative;
+  padding: 8px;
+  height: 32px;
+  
+  a {
+    width: 100%;
+    margin-top: 9px;
+    position: relative;
+    bottom: 0;
   }
 }
