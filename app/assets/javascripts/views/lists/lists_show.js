@@ -19,7 +19,7 @@ TrelloClone.Views.ListsShow = Backbone.View.extend({
     event.preventDefault();
     
     var cardFormView = new TrelloClone.Views.CardsForm({list: this.model});
-    // replace add card li
+    this._subViews.push(cardFormView);
     this.$el.find('.add-card-li').html(cardFormView.render().$el);
   },
   

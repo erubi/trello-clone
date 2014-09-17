@@ -24,3 +24,14 @@
    <%= flash[:errors].join("<br>").html_safe %>
 </div>
 <% end %>
+
+<script type="text/javascript">
+  $(function(){
+    
+    $('#add-dropdown').on('click', function(){
+      $('#add-dropdown').addClass('show-dropdown');
+    })
+
+  });
+
+</script>

@@ -15,5 +15,7 @@ window.TrelloClone = {
         Backbone.history.start();
       }
     });
+    
+    TrelloClone.Views.boardsNew = new TrelloClone.Views.BoardsNew();
   }
 };
