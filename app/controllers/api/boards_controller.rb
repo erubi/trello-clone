@@ -18,14 +18,14 @@ module Api
 
     def index
       @boards = current_user.boards
-      render json: @boards
+      render "index"
     end
 
     def show
       @board = Board.includes(lists: :cards).find(params[:id])
 
       if @board.is_member?(current_user)
-        render :show
+        render "show"
       else
         render json: ["You aren't a member of this board"], status: 403
       end

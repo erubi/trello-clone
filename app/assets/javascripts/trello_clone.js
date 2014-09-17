@@ -8,7 +8,7 @@ window.TrelloClone = {
     TrelloClone.Collections.boards.fetch({
       success: function(){
         new TrelloClone.Routers.Boards({
-          $rootEl: $('#content'),
+          $rootEl: $('#main'),
           boards: TrelloClone.Collections.boards
         });
     

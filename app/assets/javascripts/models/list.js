@@ -14,6 +14,5 @@ TrelloClone.Models.Lists = Backbone.Model.extend({
     }
 
     return payload;
-    }
   }
 });

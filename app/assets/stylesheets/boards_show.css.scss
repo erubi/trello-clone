@@ -1,0 +1,10 @@
+.boards-show-el{
+  height: 100vh;
+  background: #23719F;
+  padding: 10px;
+}
+
+.lists-ul{
+  @include row;
+  @include span-columns(12);
+}

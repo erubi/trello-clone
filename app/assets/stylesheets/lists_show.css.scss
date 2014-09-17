@@ -1,0 +1,23 @@
+.lists-show-el{
+  background: #E3E3E3;
+  @include span-columns(1);
+  width: 260px; 
+  @include omega(4n);
+  border-radius: 5px;
+  padding: 8px;
+  
+  h3 {
+    font-size: 15px;
+  }
+  
+  a {
+    color: #939393;
+    font-size: 14px;
+    font-weight: normal;
+    
+    &:hover{
+      color: #222222;
+      cursor: pointer;
+    }
+  }
+}

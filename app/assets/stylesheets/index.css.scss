@@ -1,24 +1,38 @@
-.organization-h3{
+.boards-index-el{
+  padding: 20px 25px;
+}
+
+.organization-h3 {
+  font-size: 16px;
   margin-left: 30px;
 }
 
-.boards-ul{
-  @include span-columns(12);
+.boards-ul {
+  @include row;
   margin-left: 30px;
-  
-  li{
+
+  li {
     @include span-columns(3);
+    @include omega(4n);
+    
+    display: block;
     width: 325px;
     height: 105px;
     background: #1D5F86;
     border-radius: 3px;
     padding: 10px;
     font-weight: bold;
-    color: #fff;
-    
+  
     &:hover{
      background: #195477; 
      cursor: pointer;
+    }
+    
+    a {
+      display: inline-block;
+      color: white;
+      width: 100%;
+      height: 100%;
     }
   }
   

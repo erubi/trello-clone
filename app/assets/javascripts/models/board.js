@@ -1,5 +1,5 @@
 TrelloClone.Models.Board = Backbone.Model.extend({
-  urlRoot: '/api/boards/',
+  urlRoot: '/api/boards',
   
   lists: function () {
     this._lists = this._lists ||
@@ -14,6 +14,5 @@ TrelloClone.Models.Board = Backbone.Model.extend({
     }
 
     return payload;
-    }
   }
-})
+});

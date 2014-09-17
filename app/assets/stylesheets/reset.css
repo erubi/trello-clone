@@ -478,3 +478,7 @@ input[type="checkbox"]{
    color: inherit;
    box-sizing: border-box;
  }
+ 
+ a {
+   text-decoration: none;
+ }
