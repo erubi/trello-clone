@@ -17,5 +17,6 @@ window.TrelloClone = {
     });
     
     TrelloClone.Views.boardsNew = new TrelloClone.Views.BoardsNew();
+    TrelloClone.Views.cardsEdit = new TrelloClone.Views.CardsEdit();
   }
 };

@@ -1,0 +1,73 @@
+
+/*Edit List Modal Styles*/
+
+
+#modal {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+#modal.is-active {
+  display: block;
+}
+
+#modal:before {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+#modal > article {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  width: 731px;
+  height: 544px;
+  margin-bottom: 100px;
+  margin-left: -365.5px;
+  min-height: 200px;
+  background: #F0F0F0;
+  border-radius: 5px;
+}
+
+#modal #top-modal-container{
+  padding: 20px 15px;
+}
+
+#modal > article > h1 {
+  display: block;
+  margin: auto;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#modal > article input[type="text"]{
+  background: white;
+  width: 100%;
+  margin: 14px 0;
+  padding: 10px;
+  border: 1px solid #C9C9C9;
+  border-radius: 5px;
+}
+
+#modal .hide-modal {
+  display: inline-block;
+  font-size: 25px;
+  font-weight: normal;
+  cursor: pointer;
+  color: gray;
+  position: absolute;
+  right:15px;
+  top: 15px;
+}
+
+#modal .hide-modal:hover {
+  color: black;
+}

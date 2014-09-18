@@ -5,6 +5,14 @@ TrelloClone.Views.CardsShow = Backbone.View.extend({
   
   className: 'cards-show-el',
   
+  events: {
+    'click' : 'editCard'
+  },
+  
+  editCard: function(){
+    TrelloClone.Views.cardsEdit.editCard(this.model);
+  },
+  
   initialize: function(){
     
   },

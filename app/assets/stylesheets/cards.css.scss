@@ -7,4 +7,10 @@
   background: #fff;
   font-size: 14px;
   font-weight: normal;
+  cursor: pointer;
+  
+  &:hover{
+    // should show pencil icon here
+    background: #F0F0F0;
+  }
 }
