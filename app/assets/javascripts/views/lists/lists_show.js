@@ -51,7 +51,8 @@ TrelloClone.Views.ListsShow = Backbone.View.extend({
     this._subViews = this._subViews || [];
     this.cards.each(function(card){
       var cardView = new TrelloClone.Views.CardsShow({
-        model: card
+        model: card,
+        collection: that.cards
       });
       that._subViews.push(cardView);
     });

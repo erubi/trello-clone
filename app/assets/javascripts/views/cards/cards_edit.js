@@ -14,10 +14,12 @@ TrelloClone.Views.CardsEdit = Backbone.View.extend({
     return this;
   },
   
-  editCard: function(card){
+  editCard: function(card, cardCollection){
     this.$el.empty();
     this.model = card;
+    this.collection = cardCollection;
     this.render();
+    debugger
     this.$el.find('#modal').addClass("is-active");
   },
   
