@@ -12,8 +12,10 @@ TrelloClone.Views.CardsEdit = Backbone.View.extend({
     'click' : 'checkHideModal',
     'click .hide-modal': 'hideModal' ,
     'click #edit-card-title-btn': 'editTitle',
+    'click #edit-card-desc-btn': 'editDesc',
     'click .cancel-edit-button' : 'cancelEdit',
-    'submit #edit-card-title-form' : 'saveTitle'
+    'submit #edit-card-title-form' : 'saveTitle',
+    'submit #edit-card-desc-form' : 'saveDesc'
   },
   
   render: function(){
@@ -45,7 +47,8 @@ TrelloClone.Views.CardsEdit = Backbone.View.extend({
   },
   
   editTitle: function(){
-    this.$el.toggleClass("edit-title");
+    this.$el.addClass("edit-title");
+    this.$el.removeClass("edit-desc");
   },
   
   saveTitle: function(event){
@@ -56,8 +59,22 @@ TrelloClone.Views.CardsEdit = Backbone.View.extend({
     this.cancelEdit();
   },
   
+  editDesc: function(){
+    this.$el.addClass("edit-desc");
+    this.$el.removeClass("edit-title");
+  },
+  
+  saveDesc: function(event){
+    event.preventDefault();
+    var attrs = $(event.target).serializeJSON();
+    this.model.save(attrs);
+    this.cancelEdit();
+  },
+  
   cancelEdit: function(){
     this.$el.find('input[name=title]').val(this.model.get("title"));
+    this.$el.find('textarea').val(this.model.get("description"));
     this.$el.removeClass("edit-title");
+    this.$el.removeClass("edit-desc");
   }
 });
