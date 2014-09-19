@@ -1,13 +1,23 @@
 <section id="modal">
     <article>
       <span class="hide-modal">X</span>
-      
-      <form id="edit-card-form">
-        <input 
-          type="text"
-          name="title"
-          value="<%= card.get("title") %>">
-      </form>
+        <form id="edit-card-title-form" class="hidden">
+          <input
+             type="text"
+             value="<%= card.get("title") %>"
+             name="title">
+             
+          <input
+            type="submit"
+            value="Save">
+          <span class="cancel-edit-button">X</span>
+        </form>
+        <span id="edit-card-title-btn"><%= card.get("title") %></span>
+        
+        <span class="in-list-span">in list <%= list.get("title") %></span>
+        
+        <form id="edit-card-desc-form" class="hidden">
+        </form>
     </article>
     
 </section>

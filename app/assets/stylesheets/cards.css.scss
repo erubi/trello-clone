@@ -14,3 +14,52 @@
     background: #F0F0F0;
   }
 }
+
+
+#edit-card-title-btn{
+  cursor: pointer;
+}
+
+.cancel-edit-button{
+  color: #A6A6A6;
+  font-size: 25px;
+  margin-left: 15px ;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+#edit-card-title-form{
+  display: none;
+  width: 620px;
+  float: left;
+  
+  input[type="text"]{
+    float: left;
+    
+    padding: 0 5px 50px 5px;
+    background: #E8E8E9;
+    border-radius: 5px;
+    border: 1px solid #C4C5C5;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  input[type="submit"]{
+    float: left;
+    color: #fff;
+    padding: 5px 8px;
+    background: #1F8E22;
+    border-radius: 3px;
+  }
+}
+
+.edit-card-el.edit-title{
+  
+  #edit-card-title-btn, .in-list-span{
+    display: none;
+  }
+  
+  #edit-card-title-form{
+    display: block;
+  }
+}
