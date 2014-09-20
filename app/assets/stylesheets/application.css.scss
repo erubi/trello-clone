@@ -81,11 +81,6 @@ body{
   }
 }
 
-#add-dropdown{
-  font-size: 26px;
-  padding: 0 7px 0 7px;
-  font-weight: normal;
-}
 
 #main{
   position: relative;
@@ -94,43 +89,6 @@ body{
   height: 100%;
 }
 
-
-#add-dropdown {
-  position: relative;
-  
-  h3{
-    font-size: 14px;
-    height: 38px;
-    color: #939393;
-  }
-  
-  div {
-    font-size: 14px;
-    display: none;
-    position: absolute;
-    width: 300px;
-    height: 150px;
-    background: #fff;
-    left: -190px;
-  }
-  label, input{
-    color:#393939;
-  }
-  
-  input, label{
-    display: block;
-    float: left;
-    width: 100%;
-  }
-  
-}
-
-#add-dropdown.show-dropdown{
-  
-  div {
-    display: block;
-  }
-}
 
 .hidden {
   display: none;
