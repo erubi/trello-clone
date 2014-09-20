@@ -31,9 +31,11 @@ TrelloClone.Views.ListsShow = Backbone.View.extend({
       this.removeSubViews();
     }
     
-    this.createSubViews();
-    this.attachSubViews();
-    this.renderSubViews();
+    if (this.cards.length > 0){
+      this.createSubViews();
+      this.attachSubViews();
+      this.renderSubViews(); 
+    }
     
     return this;
   },

@@ -9,9 +9,8 @@
 #lists-ul{
   @include row;
   @include omega(45n);
-  margin-top: 10px;
   width: 100%;
-  height: 100%;
+  height: 92%;
   overflow-x:scroll;
   overflow-y:hidden;
   white-space: nowrap;

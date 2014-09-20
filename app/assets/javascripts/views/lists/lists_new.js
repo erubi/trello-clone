@@ -28,6 +28,7 @@ TrelloClone.Views.ListsNew = Backbone.View.extend({
       this.board.lists().add(list); 
     }
     this.cancelAdd();
+
     list.save();
   },
   
