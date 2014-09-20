@@ -65,6 +65,17 @@ body{
   height: 100%;
 }
 
+.navbar-brand{
+  position: relative;
+  bottom: 4px;
+  color: #8EB0C4;
+  font-size: 22px;
+  font-family: 'Pacifico', cursive;
+  
+  &:hover{
+   color: #D2DFE7; 
+  }
+}
 .navbar-right{
   @include span-columns(3);
   ul{

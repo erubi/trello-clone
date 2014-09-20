@@ -7,7 +7,7 @@
     <ul>
     <% if signed_in? %>
       <li id='add-dropdown' class='dropdown'>
-        <button>+</button>
+        <button></button>
       </li>
       <li><%= button_to "Sign out", session_url, method: :delete, class: "navbar-btn" %></li>
     <% else %>
