@@ -7,7 +7,12 @@ TrelloClone.Views.ListsNew = Backbone.View.extend({
   
   events: {
     'click .add-list-btn' : 'showListForm',
+    'click #cancel-add-list' : 'cancelAdd',
     'submit' : 'addList'
+  },
+  
+  cancelAdd: function(){
+    this.$el.removeClass("show-form");
   },
   
   showListForm: function(){
@@ -19,7 +24,10 @@ TrelloClone.Views.ListsNew = Backbone.View.extend({
     var attrs = $(event.target).serializeJSON();
     var list = new TrelloClone.Models.List(attrs)
     list.set('board_id', this.board.id);
-    this.board.lists().add(list);
+    if (list.isValid()){
+      this.board.lists().add(list); 
+    }
+    this.cancelAdd();
     list.save();
   },
   

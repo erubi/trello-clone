@@ -1,9 +1,5 @@
 .lists-show-el{
-  position: relative;
-  background: #E3E3E3;
-  @include span-columns(1 of 12);
-  width: 260px;
-  border-radius: 5px;
+  height: 100%;
   h3 {
     font-size: 15px;
   }
@@ -21,17 +17,26 @@
       cursor: pointer;
     }
   }
+  
+  .list-container{
+    position: relative;
+    border-radius: 5px;
+    background: #E3E3E3;
+  }
 }
 
 .list-title{
   border-radius: 5px;
   padding: 8px;
+  float: left;
+  width: 100%;
 }
 
 .add-card-li{
   position: relative;
   padding: 8px;
   height: 32px;
+  float: left;
   
   a {
     width: 100%;
@@ -43,13 +48,21 @@
 
 .cards-list-li{
   padding: 8px;
+  float: left;
+  width: 100%;
+}
+
+#cards-ul > li{
+  float: left;
 }
 
 .lists-new-el{
-  @include span-columns(1 of 12);
   width: 260px;
+  height: 100%;
   border-radius: 5px;
   padding: 2px;
+  float: none;
+  vertical-align:top;
 
   .add-list-btn{
     //  transparent background

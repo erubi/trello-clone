@@ -21,13 +21,32 @@
 @import "cards";
 @import "modal";
 
+html, body{
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  min-height: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
 body{
   width: 100%;
+  min-height: 100%;
   height: 100%;
   overflow: hidden;
   font-family: $helvetica;
   font-weight: bold;
   font-size: 16px;
+}
+
+//clear fix
+.group:after{
+  display: block;
+  content: "";
+  clear: both;
 }
 
 .navbar{
@@ -69,8 +88,10 @@ body{
 }
 
 #main{
+  position: relative;
   max-width: 100%;
-  min-height: 100vh;
+  min-height: 100%;
+  height: 100%;
 }
 
 
