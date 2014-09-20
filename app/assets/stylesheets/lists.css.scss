@@ -30,7 +30,24 @@
   padding: 8px;
   float: left;
   width: 100%;
+  
+  h3{
+    width: 80%;
+    text-overflow: ellipsis;
+    display: inline-block;
+  }
+  
+  #delete-list-btn{
+    float: right;
+    height: 16px;
+    width: 16px;
+    background-image: url(image-path('icons/delete.png'));
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
 }
+
 
 .add-card-li{
   position: relative;

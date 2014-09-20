@@ -12,7 +12,8 @@ TrelloClone.Views.ListsShow = Backbone.View.extend({
   },
   
   events: {
-    'click .add-card-li' : 'addCard'
+    'click .add-card-li' : 'addCard',
+    'click #delete-list-btn' : 'deleteList'
   },
   
   addCard: function(event){
@@ -21,6 +22,10 @@ TrelloClone.Views.ListsShow = Backbone.View.extend({
     var cardFormView = new TrelloClone.Views.CardsForm({list: this.model});
     this._subViews.push(cardFormView);
     this.$el.find('.add-card-li').html(cardFormView.render().$el);
+  },
+  
+  deleteList: function(){
+    this.model.destroy();
   },
   
   render: function(){
