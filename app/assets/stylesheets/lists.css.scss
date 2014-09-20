@@ -46,3 +46,66 @@
 .cards-list-li{
   padding: 8px;
 }
+
+.lists-new-el{
+  @include span-columns(1 of 12);
+  width: 260px;
+  border-radius: 5px;
+  padding: 2px;
+
+  .add-list-btn{
+    //  transparent background
+    // get right color text
+    //hover
+    background: transparent;
+    color: #BCD1DD;
+    
+    &:hover{
+      cursor: pointer;
+      background: #194F70; 
+    }
+  }
+  
+  form {
+    display: none;
+    
+    input[type="text"]{
+      background: #D2D2D3;
+      font-weight: normal;
+      width: 100%;
+      padding: 8px;
+      border-radius: 3px;
+      border: 1px solid #C4C5C5;
+    }
+    
+    input[type="submit"]{
+      float: left;
+      color: #fff;
+      padding: 5px 8px;
+      background: #1F8E22;
+      border-radius: 3px;
+    }
+  }
+}
+
+.lists-new-el.show-form{
+  background: #E3E3E3;
+  height: 74px;
+  
+  form{
+    display: block;
+  }
+  
+  .add-list-btn{
+    display: none;
+  }
+}
+
+#cancel-add-list{
+  color: #A6A6A6;
+  font-size: 25px;
+  margin-left: 15px ;
+  font-weight: normal;
+  cursor: pointer;
+  float: left;
+}

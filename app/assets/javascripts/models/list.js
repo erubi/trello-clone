@@ -1,4 +1,4 @@
-TrelloClone.Models.Lists = Backbone.Model.extend({
+TrelloClone.Models.List = Backbone.Model.extend({
   urlRoot: '/api/lists/',
   
   cards: function () {
