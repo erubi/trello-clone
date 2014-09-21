@@ -1,6 +1,7 @@
 TrelloClone::Application.routes.draw do
   root to: 'static_pages#root'
-
+  get 'landing',  to: "static_pages#landing", as: :landing
+  
   resources :users
   resource :session
 
