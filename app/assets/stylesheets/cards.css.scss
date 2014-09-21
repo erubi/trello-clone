@@ -92,11 +92,35 @@
   span {
     cursor: pointer;
     text-decoration: underline;
+    font-weight: bold;
     
     &:hover{
       color: black;
     } 
   }
+}
+
+
+.edit-description-header{
+  float: left;
+  font-weight:normal;
+  color: #989898;
+  font-size: 14px;
+  margin-top: 18px;
+  
+  span{
+    text-decoration: underline;
+    cursor: pointer;
+    margin-left: 8px;
+  }
+}
+
+.card-desc{
+  float: left;
+  width: 100%;
+  font-size: 14px;
+  font-weight:normal;
+  margin-top: 11px;
 }
 
 #edit-card-desc-btn{
@@ -119,7 +143,7 @@
 
 #edit-card-desc-form{
   display: none;
-  width: 510px;
+  width: 100%;
   float: left;
   
   textarea {
@@ -128,7 +152,8 @@
     background: #E8E8E9;
     border-radius: 5px;
     border: 1px solid #C4C5C5;
-    width: 100%;
+    width: 510px;
+    margin-right:100%;
     height: 150px;
     margin-top: 20px;
     margin-bottom: 5px;
@@ -150,5 +175,14 @@
   
   #edit-card-desc-form{
     display: block;
+  }
+  
+  .edit-description-header{
+    span{
+      display: none;
+    }
+  }
+  .card-desc{
+    display: none;
   }
 }

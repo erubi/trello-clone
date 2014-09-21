@@ -13,6 +13,7 @@ TrelloClone.Views.CardsEdit = Backbone.View.extend({
     'click .hide-modal': 'hideModal' ,
     'click #edit-card-title-btn': 'editTitle',
     'click #edit-card-desc-btn': 'editDesc',
+    'click .edit-description-header span': 'editDesc',
     'click .cancel-edit-button' : 'cancelEdit',
     'submit #edit-card-title-form' : 'saveTitle',
     'submit #edit-card-desc-form' : 'saveDesc'
@@ -37,6 +38,8 @@ TrelloClone.Views.CardsEdit = Backbone.View.extend({
     event.preventDefault();
     event.stopPropagation();
     this.$el.find('#modal').removeClass("is-active");
+    this.$el.removeClass("edit-title");
+    this.$el.removeClass("edit-desc");
   },
   
   checkHideModal: function(event){
@@ -69,6 +72,7 @@ TrelloClone.Views.CardsEdit = Backbone.View.extend({
     var attrs = $(event.target).serializeJSON();
     this.model.save(attrs);
     this.cancelEdit();
+    this.editCard(this.model, this.collection);
   },
   
   cancelEdit: function(){

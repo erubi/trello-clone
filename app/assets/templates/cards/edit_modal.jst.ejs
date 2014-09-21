@@ -17,8 +17,13 @@
         <span id="edit-card-title-btn"><%= card.get("title") %></span>
         <span class="in-list-span">in list <span><%= list.get("title") %></span></span>
       </div>
-        
-      <span id="edit-card-desc-btn">Edit the description...</span>
+      
+      <% if (card.get("description") == null || card.get("description").length <= 0){ %>
+        <span id="edit-card-desc-btn">Edit the description...</span>
+      <% } else { %>
+        <div class="edit-description-header">Description<span>Edit</span></div>
+        <div class="card-desc"><%= card.get("description") %></div>
+      <% } %>
       <form id="edit-card-desc-form" class="hidden">
         <textarea name="description"><%= card.get("description") %></textarea>
         <input
