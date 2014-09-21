@@ -52,16 +52,16 @@
 #modal > article input[type="text"]{
 //  font-size: 18px;
 }
-
 #modal .hide-modal {
-  display: inline-block;
-  font-size: 25px;
-  font-weight: normal;
   cursor: pointer;
-  color: gray;
-  position: absolute;
-  right:15px;
-  top: 15px;
+  float: right;
+  position: relative;
+  margin-left: 14px;
+  height: 18px;
+  width: 18px;
+  background-image: image-url('icons/big-cancel.png');
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 #modal .hide-modal:hover {

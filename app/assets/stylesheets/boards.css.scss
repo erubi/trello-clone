@@ -1,11 +1,8 @@
 #add-dropdown{
-  font-size: 26px;
-  padding: 0 7px 0 7px;
-  font-weight: normal;
   
   button{
-    height: 30px;
-    width: 30px;
+    height: 20px;
+    width: 20px;
     background-image: image-url('icons/plus.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -17,6 +14,7 @@
   position: relative;
   
   div {
+    border: 1px solid #DBDBDB;
     position: relative;
     padding: 10px;
     font-size: 14px;
@@ -88,9 +86,9 @@
 }
 
 #cancel-create-board{
-  position: relative;
-  bottom: 2px;
-  float: right;
+  position: absolute;
+  right: 2px;
+  top: 8px;
   height: 30px;
   width: 30px;
   background-image: image-url('icons/small-cancel.png');
@@ -106,7 +104,7 @@
   background: #23719F;
   padding: 10px;
   
-  h3{
+  > h3{
     font-size: 18px;
     padding-left: 8px;
     margin-bottom: 10px;

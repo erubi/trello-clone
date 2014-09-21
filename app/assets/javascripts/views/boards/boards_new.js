@@ -4,7 +4,8 @@ TrelloClone.Views.BoardsNew = Backbone.View.extend({
   template: JST['boards/new'],
   
   events: {
-    'click .create-board-btn' : 'createBoard'
+    'click .create-board-btn' : 'createBoard',
+    'click #cancel-create-board' : 'cancelBoard'
   },
   
   initialize: function(){
@@ -16,6 +17,11 @@ TrelloClone.Views.BoardsNew = Backbone.View.extend({
     this.$el.html(content);
     
     return this;
+  },
+  
+  cancelBoard: function(){
+    event.stopPropagation();
+    $('#add-dropdown').removeClass('show-dropdown');
   },
   
   createBoard: function(){

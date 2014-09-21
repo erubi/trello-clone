@@ -15,8 +15,15 @@ window.TrelloClone = {
         Backbone.history.start();
       }
     });
-    
+    bindClickOutHandlers();
     TrelloClone.Views.boardsNew = new TrelloClone.Views.BoardsNew();
     TrelloClone.Views.cardsEdit = new TrelloClone.Views.CardsEdit();
   }
 };
+
+
+function bindClickOutHandlers(){
+  $(document).on('click', function(){
+    $('#add-dropdown').removeClass('show-dropdown');
+  })
+}

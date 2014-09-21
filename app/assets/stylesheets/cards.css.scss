@@ -8,6 +8,7 @@
   font-size: 14px;
   font-weight: normal;
   cursor: pointer;
+  color: #393939;
   
   &:hover{
     // should show pencil icon here
@@ -30,12 +31,16 @@
 }
 
 .cancel-edit-button{
-  color: #A6A6A6;
-  font-size: 25px;
-  margin-left: 15px ;
-  font-weight: normal;
   cursor: pointer;
   float: left;
+  position: relative;
+  top: 6px;
+  margin-left: 14px;
+  height: 18px;
+  width: 18px;
+  background-image: image-url('icons/big-cancel.png');
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 #edit-card-title-form{
@@ -64,7 +69,7 @@
 }
 
 #card-title-container{
-  width: 100%;
+  width: 90%;
   float: left;
 }
 

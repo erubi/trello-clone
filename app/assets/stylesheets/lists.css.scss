@@ -30,6 +30,7 @@
   padding: 8px;
   float: left;
   width: 100%;
+  color: #393939;
   
   h3{
     width: 80%;
@@ -61,12 +62,49 @@
     position: relative;
     bottom: 0;
   }
+  
+  textarea{
+    float: left;
+    padding: 8px 5px 30px 5px;
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #C4C5C5;
+    width: 100%;
+    float: left;
+    margin-bottom: 9px;
+    
+    &:focus{
+      outline:none;
+    }
+  }
+  
+  input[type="submit"]{
+    float: left;
+    color: #fff;
+    padding: 5px 8px;
+    background: #1F8E22;
+    border-radius: 3px;
+    font-size: 14px;
+  }
+  
+  #cancel-add-card{
+    cursor: pointer;
+    float: left;
+    position: relative;
+    top: 6px;
+    margin-left: 14px;
+    height: 18px;
+    width: 18px;
+    background-image: image-url('icons/big-cancel.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
 }
 
 .cards-list-li{
-  padding: 8px;
   float: left;
   width: 100%;
+  padding: 0 8px;
 }
 
 #cards-ul > li{
