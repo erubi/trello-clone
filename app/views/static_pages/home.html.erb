@@ -1,0 +1,47 @@
+<div id="home-container">
+  <section class="home-welcome">
+    <h1>Welcome back to Trello Clone!</h1>
+    <div class="demo-login">Demo Account</div>
+    <a id="login-link" href="#">Log in with email and password</a>
+  
+    <form action="<%= session_url %>" method="post">
+      <input 
+        type="hidden"
+        name="authenticity_token"
+        value="<%= form_authenticity_token %>">
+    
+      <label for="email">Email (or username)</label>
+      <input
+        id="email"
+        type="text"
+        placeholder="e.g., user@example.com"
+        name="user[email]">
+    
+      <label for="password">Password</label>
+      <input
+        id="password"
+        type="password"
+        placeholder="e.g., &middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;"
+        name="user[password]">
+      
+      <input type="submit" value="Log In">
+    </form>
+  
+    <a id="demo-link" href="#">Log in as Guest</a>
+  </section>
+
+  <section class="home-description">
+    <h1>Trello Clone makes it easy to organize anything with anyone.</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <div class="home-sign-up-btn">Sign Up - It's Free.</div>
+    <a href="<%= new_user_url %>">Or Demo Account</a>
+  </section>
+</div>
+<script>
+  $(function(){
+    $('.home-welcome a').on('click', function(){
+      console.log("yo");
+      $('.home-welcome').addClass('home-show-login');
+    })
+  })
+</script>

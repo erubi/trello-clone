@@ -1,0 +1,190 @@
+#home-container{
+  overflow: auto;
+  height: 100%;
+  width: 100%;
+}
+
+.home-welcome{
+  height: 321px;
+  width: 100%;
+  background: #ECF4F9;
+  
+  h1{
+    display:inline-block;
+    width: 100%;
+    margin-top: 60px;
+    font-size: 36px;
+    line-height: 42px;
+    text-align:center;
+    color: #4D4D4D;
+  }
+  
+  .demo-login {
+    background: #62B52E;
+    margin: 0 auto;
+    padding: 16px 25px;
+    width: 240px;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 3px;
+    box-shadow: 0 2px 1px 0 #376619;
+    cursor: pointer;
+    
+    &:hover{
+      background: #509425;
+    }
+  }
+  
+  a {
+    text-decoration: underline;
+    color: #999999;
+    font-size: 20px;
+    text-align:center;
+    font-weight: 300;
+    display: block;
+    margin: 0 auto;
+    margin-top: 55px;
+    
+    &:hover{
+      color: #393838;
+    }
+  }
+  
+  form {
+    display: none;
+    width: 400px;
+    margin: 0 auto;
+    
+    label{
+      float: left;
+      margin-bottom: 10px;
+      font-weight: 300;
+      font-size: 20px;
+    }
+    
+    input[type="text"],
+    input[type="password"]{
+      background: #fff;
+      outline: none;
+      color: #4D4D4D;
+      float: left;
+      width: 100%;
+      padding: 11px 7px;
+      border-radius: 3px;
+      border: 1px solid #CCCCCC;
+      font-weight: 300;
+      font-size: 20px;
+      margin-bottom: 18px;
+      
+      &:focus{
+       box-shadow: 0 0 5px #BFBFBF;
+       border: 1px solid #BFBFBF;
+      }
+    }
+    
+    input[type="submit"]{
+      background: #62B52E;
+      padding: 12px 22px;
+      width: 110px;
+      text-align: center;
+      color: #fff;
+      font-size: 20px;
+      border-radius: 3px;
+      box-shadow: 0 2px 1px 0 #376619;
+      float: left;
+      
+      &:hover{
+        background: #509425;
+      }
+    }
+  }
+}
+
+#demo-link{
+  float: left;
+  position: relative;
+  top: 30px;
+  display: none;
+}
+
+.home-welcome.home-show-login{
+  height: 480px;
+  
+  form{
+    display: block;
+  }
+  
+  #demo-link{
+    display: block;
+  }
+  
+  #login-link {
+    display: none;
+  }
+  
+  div.demo-login{
+    display: none;
+  }
+  
+  
+  
+}
+
+.home-description{
+  background: #fff;
+  height: 500px;
+  width: 100%;
+  
+  h1{
+    display: inline-block;
+    width: 100%;
+    margin-top: 100px;
+    font-size: 36px;
+    line-height: 42px;
+    text-align:center;
+    color: #4D4D4D;
+  }
+  
+  p{
+    margin: 0 auto;
+    text-align:center;
+    color: #4D4D4D;
+    font-size: 20px;
+    font-weight: 300;
+    width: 590px;
+  }
+  
+  .home-sign-up-btn{
+    background: #21A2EB;
+    margin: 0 auto;
+    margin-top: 28px;
+    padding: 16px 25px;
+    width: 240px;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 3px;
+    box-shadow: 0 2px 1px 0 #005180;
+    cursor: pointer;
+    
+    &:hover{
+      background: #1B8CCF;
+    }
+  }
+  
+  a{
+    text-decoration: underline;
+    color: #999999;
+    font-size: 20px;
+    text-align:center;
+    font-weight: 300;
+    display: block;
+    margin: 0 auto;
+    margin-top: 35px;
+    
+    &:hover{
+      color: #393838;
+    }
+  }
+}

@@ -1,10 +1,10 @@
 class StaticPagesController < ApplicationController
-  before_action :require_signed_in, only: [:root]
-  before_action :require_signed_out, only: [:landing]
+  before_action :require_signed_in!, only: [:root]
+  before_action :require_signed_out!, only: [:home]
   
   def root
   end
   
-  def landing
+  def home
   end
 end
