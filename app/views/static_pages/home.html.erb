@@ -1,7 +1,7 @@
 <div id="home-container">
   <section class="home-welcome">
     <h1>Welcome back to Trello Clone!</h1>
-    <div class="demo-login">Demo Account</div>
+    <%= link_to "Demo Account", users_path, method: :post, class: "home-demo-login" %>
     <a id="login-link" href="#">Log in with email and password</a>
   
     <form class="group" action="<%= session_url %>" method="post">
@@ -26,8 +26,8 @@
       
       <input type="submit" value="Log In">
     </form>
-  
-    <a id="demo-link" href="#">Log in as Guest</a>
+    
+    <%= link_to "Log in as Guest", users_path, method: :post, id: "demo-link" %>
   </section>
 
   <section class="home-description">
