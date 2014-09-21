@@ -35,6 +35,7 @@ TrelloClone.Views.BoardsNew = Backbone.View.extend({
       }
     });
     TrelloClone.Collections.boards.add(board);
+    this.cancelBoard();
   }
   
   

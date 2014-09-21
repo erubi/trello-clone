@@ -1,12 +1,26 @@
-<h1>Sign Up</h1>
+<div class="sign-up-container group">
+  <h1>Create a Trello Clone Account</h1>
 
-<form action="/users" method="post">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <label>Email<br>
-    <input name="user[email]" type="text"><br>
-  </label><br>
-  <label>Password<br>
-    <input name="user[password]" type="password"><br>
-  </label><br>
-  <input type="submit" value="Submit" class="btn btn-primary"><br>
-</form>
+  <form action="/users" method="post" class="group">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <label for="email">Email</label>
+    <input 
+      placeholder="e.g., user@example.com"
+      id="email"
+      name="user[email]" 
+      type="text">
+    
+    <label for="password">Password</label>
+    <input
+      name="user[password]"
+      type="password"
+      placeholder="e.g., &middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;">
+      
+    <input type="submit" value="Create New Account" class="btn btn-primary"><br>
+  </form>
+  
+  <div class="demo-login">
+    <h3>Want to try the site?</h3>
+    <a href="#">Demo Account</a>
+  </div>
+</div>
