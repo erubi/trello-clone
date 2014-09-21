@@ -14,13 +14,17 @@ TrelloClone.Views.CardsShow = Backbone.View.extend({
   },
   
   initialize: function(){
-    
+    this.listenTo(this.model, "change:description", this.render);
   },
   
   render: function(){
     var content = this.template({card: this.model});
     this.$el.html(content);
-    
+    if (this.model.get("description") != null && this.model.get("description") != ""){
+      this.$el.addClass("has-description");
+    } else {
+      this.$el.removeClass("has-description");
+    }
     return this;
   }
 })

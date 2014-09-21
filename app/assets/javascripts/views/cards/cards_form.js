@@ -31,7 +31,10 @@ TrelloClone.Views.CardsForm = Backbone.View.extend({
     var card = new TrelloClone.Models.Card(attrs);
     card.set('list_id', this.list.id);
     card.save();
-    this.list.cards().add(card);
+    
+    if (card.isValid()){
+      this.list.cards().add(card); 
+    }
   },
   
   cancelAdd: function(){

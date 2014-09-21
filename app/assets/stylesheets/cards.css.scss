@@ -10,12 +10,30 @@
   cursor: pointer;
   color: #393939;
   
+  .card-title{
+    width: 100%;
+    float: left;
+  }
+  
   &:hover{
     // should show pencil icon here
     background: #F0F0F0;
   }
 }
 
+.cards-show-el.has-description{
+  .icon-container{
+    float: left;
+    position: relative;
+    margin-top: 6px;
+    margin-left: 3px;
+    height: 14px;
+    width: 14px;
+    background-image: image-url('icons/notes.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
 
 .edit-card-el{
   #modal{
