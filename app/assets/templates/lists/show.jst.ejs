@@ -14,20 +14,40 @@
 
 <script>
   $(function(){
+    var oldList, newList;
+    
     $('.cards-ul').sortable({
       connectWith: '.cards-ul',
       placeholder: "card-sortable-placeholder",
       forcePlaceholderSize: true,
       start: function(e, ui){
+        oldList = $(ui.item).closest(".cards-ul");
         ui.placeholder.height(ui.helper.outerHeight());
       },
       update: function(event, ui){
-        var list_id = $(ui.item).closest(".cards-ul").attr("list-id");
-        $(ui.item).trigger('switchList', list_id);
+        newList = $(ui.item).closest(".cards-ul");
+        var newListId = newList.attr("list-id");
+        var oldListId = oldList.attr("list-id");
         
-        $(".cards-show-el").each(function(index){
-          $(this).trigger('drop', index);
-        })
+        if (oldListId != newListId){
+          
+          var list_id = newList.attr("list-id");
+          $(ui.item).trigger('switchList', list_id);
+          
+          $(oldList).find(".cards-show-el").each(function(index){
+            $(this).trigger('drop', index);
+          })
+          
+          $(newList).find(".cards-show-el").each(function(index){
+            $(this).trigger('drop', index);
+          })
+          
+        } else {
+          $(oldList).find(".cards-show-el").each(function(index){
+            $(this).trigger('drop', index);
+          })
+        }
+        
       }
     })
   })

@@ -14,11 +14,12 @@ TrelloClone.Views.CardsShow = Backbone.View.extend({
   switchList: function(event, list_id){
     if (list_id != this.model.get("list_id")){
       this.model.set('list_id', list_id);
+      this.model.save();
       this.collection.list.trigger('switchCards', this.model, list_id);
     }
   },
   
-  drop: function(event, index, list_id){
+  drop: function(event, index){
     this.model.set('ord', index);
     this.model.save();
   },
