@@ -41,6 +41,15 @@ class User < ActiveRecord::Base
 
     c4 = l1.cards.create(title: 'buy furniture', description: 'get a table')
 
+
+    l1 = b2.lists.create(title: 'todo', ord: 0)
+    l2 = b2.lists.create(title: 'doing', ord: 1)
+    l3 = b2.lists.create(title: 'done', ord: 2)
+
+    c1 = l3.cards.create(title: 'plan new project')
+    c2 = l2.cards.create(title: 'update rails gems', description: 'shoulda matchers!')
+    c3 = l1.cards.create(title: 'start new project')
+    
     # i1 = c1.items.create(done: false, title: 'mocha')
     # i2 = c1.items.create(done: true, title: 'mocha')
     # i3 = c1.items.create(done: true, title: 'cookie')

@@ -134,4 +134,12 @@ textarea {
     cursor: -webkit-grabbing;
 }
 
+.rotated{
+  -webkit-transform: rotate(4deg);
+   -moz-transform: rotate(4deg);
+   -o-transform: rotate(4deg);
+   -ms-transform: rotate(4deg);
+   transform: rotate(4deg);
+}
+
 
