@@ -13,6 +13,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'bourbon'
 gem 'neat'
 gem 'pg'
+gem 'newrelic_rpm'
 
 group :doc do
   gem 'sdoc', require: false
