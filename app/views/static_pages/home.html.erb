@@ -34,13 +34,12 @@
     <h1>Trello Clone makes it easy to organize anything with anyone.</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     <a href="<%= new_user_url %>" class="home-sign-up-btn">Sign Up - It's Free.</a>
-    <a href="<%= new_user_url %>">Or Demo Account</a>
+    <%= link_to "Or Demo Account", users_path, method: :post %>
   </section>
 </div>
 <script>
   $(function(){
     $('#login-link').on('click', function(){
-      console.log("yo");
       $('.home-welcome').addClass('home-show-login');
     })
   })
