@@ -1,5 +1,5 @@
 #Trello Clone: a Trello Clone
-Trello Clone is a clone of Trello Clone, a popular work organization and collaboration app. It was built by Evan Rubinton in Summer 2014. You can view it at..
+[Trello Clone](trello.evanrubinton.me) is a clone of [Trello](trello.com), a popular work organization and collaboration app. It was built by [Evan Rubinton](http://evanrubinton.me) in Summer 2014. You can view it at http://trello.evanrubinton.me.
 
 ##Features
 Trello Clone has many of the coolest features of Trello
