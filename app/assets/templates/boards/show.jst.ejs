@@ -1,2 +1,15 @@
 <h3><%= board.get("title") %></h3>
 <ul id="lists-ul"></ul>
+
+<script>
+  $(function(){
+    $('#lists-ul').sortable({
+      axis: 'x',
+      update: function(event, ui){
+        $(".lists-show-el").each(function(index){
+          $(this).trigger('drop', index);
+        })
+      }
+    })
+  })
+</script>

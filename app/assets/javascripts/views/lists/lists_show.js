@@ -6,6 +6,7 @@ TrelloClone.Views.ListsShow = Backbone.View.extend({
   className: "lists-show-el",
   
   initialize: function(){
+    this.$el.attr('id', "list_" + this.model.id);
     this.cards = this.model.cards();
     this.listenTo(this.model, "sync", this.render);
     this.listenTo(this.model.cards(), "add remove", this.render);
@@ -14,7 +15,13 @@ TrelloClone.Views.ListsShow = Backbone.View.extend({
   
   events: {
     'click .add-card-li' : 'addCard',
-    'click #delete-list-btn' : 'deleteList'
+    'click #delete-list-btn' : 'deleteList',
+    'drop' : 'drop'
+  },
+  
+  drop: function(event, index){
+    this.model.set('ord', index);
+    this.model.save();
   },
   
   addCard: function(event){
@@ -22,7 +29,6 @@ TrelloClone.Views.ListsShow = Backbone.View.extend({
     
     var cardFormView = new TrelloClone.Views.CardsForm({list: this.model});
     this._subViews.push(cardFormView);
-    // this.$el.find('.add-card-li') add class?
     this.$el.find('.add-card-li').html(cardFormView.render().$el);
   },
   
