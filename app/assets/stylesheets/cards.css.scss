@@ -35,6 +35,15 @@
   }
 }
 
+.card-sortable-placeholder{
+  float: left;
+  width: 100%;
+  margin-bottom: 5px;
+  visibility: visible;
+  border-radius: 3px;
+  background: #C0C0C0;
+}
+
 .edit-card-el{
   #modal{
     article{

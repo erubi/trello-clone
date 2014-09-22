@@ -107,8 +107,19 @@
   padding: 0 8px;
 }
 
-#cards-ul > li{
+.cards-ul{
+  width: 100%;
   float: left;
+  min-height: 15px;
+  
+  >li {
+    float: left;
+  }
+}
+
+.sortable-dropzone{
+  min-height: 20px;
+  visibility: hidden;
 }
 
 .lists-new-el{
