@@ -1,5 +1,6 @@
 .lists-show-el{
-  height: 100%;
+display: inline-block;
+vertical-align: top;
   h3 {
     font-size: 15px;
   }
@@ -194,4 +195,9 @@
   background-image: image-url('icons/big-cancel.png');
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+.list-sortable-placeholder{
+  border-radius: 3px;
+  background: #1B5A7F;
 }

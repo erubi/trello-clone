@@ -3,12 +3,18 @@ TrelloClone.Views.CardsShow = Backbone.View.extend({
   
   tagName: 'li',
   
-  className: 'cards-show-el',
+  className: 'cards-show-el grab',
   
   events: {
     'click' : 'editCard',
     'drop' : 'drop',
-    'switchList' : 'switchList'
+    'switchList' : 'switchList',
+    'mousedown' : 'toggleGrab',
+    'mouseUp' : 'toggleGrab'
+  },
+  
+  toggleGrab: function(){
+    this.$el.toggleClass('grab').toggleClass('grabbing')
   },
   
   switchList: function(event, list_id){

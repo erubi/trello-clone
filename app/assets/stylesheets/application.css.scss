@@ -122,4 +122,16 @@ textarea {
     resize: none;
 }
 
+.grab {
+      cursor: hand;
+      cursor: grab;
+      cursor: -moz-grab;
+      cursor: -webkit-grab;
+}
+.grabbing {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}
+
 

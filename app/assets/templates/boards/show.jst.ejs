@@ -5,6 +5,13 @@
   $(function(){
     $('#lists-ul').sortable({
       axis: 'x',
+      items: ">li:not(.lists-new-el)",
+      placeholder: "list-sortable-placeholder",
+      forcePlaceholderSize: true,
+      tolerance: "pointer",
+      start: function(e, ui){
+        ui.placeholder.height(ui.item.height());
+      },
       update: function(event, ui){
         $(".lists-show-el").each(function(index){
           $(this).trigger('drop', index);
