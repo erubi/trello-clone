@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   def new; end
 
   def create
-    @user = User.new(user_params)
+    @user = params[:user] ? User.new(user_params) : User.new_guest
 
     if @user.save
       sign_in!(@user)

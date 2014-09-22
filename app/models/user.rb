@@ -22,6 +22,36 @@ class User < ActiveRecord::Base
 
   attr_reader :password
   after_initialize :ensure_session_token
+  after_create :guest_setup
+  
+  def guest_setup
+    return unless self.guest
+    u1 = self
+
+    b1 = u1.boards.create(title: 'Apartment')
+    b2 = u1.boards.create(title: 'Work')
+
+    l1 = b1.lists.create(title: 'todo')
+    l2 = b1.lists.create(title: 'doing')
+    l3 = b1.lists.create(title: 'done')
+
+    c1 = l3.cards.create(title: 'clean', description: 'clean all the things')
+    c2 = l2.cards.create(title: 'organize', description: 'organize all the things')
+    c3 = l1.cards.create(title: 'decorate', description: 'decorate all the things')
+
+    c4 = l1.cards.create(title: 'buy furniture', description: 'get a table')
+
+    # i1 = c1.items.create(done: false, title: 'mocha')
+    # i2 = c1.items.create(done: true, title: 'mocha')
+    # i3 = c1.items.create(done: true, title: 'cookie')
+    
+  end
+  
+  def self.new_guest
+    u = User.create(:email => "guest_#{Time.now.to_i}#{rand(99)}@example.com", guest: true, password_digest: "")
+    u.save(validate: false)
+    u
+  end
 
   def gravatar_url
     "http://www.gravatar.com/avatar/#{ Digest::MD5.hexdigest(email) }"
