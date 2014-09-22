@@ -7,6 +7,11 @@ TrelloClone.Views.BoardsShow = Backbone.View.extend({
     this.lists = this.model.lists();
     this.listenTo(this.model, "sync", this.render);
     this.listenTo(this.model.lists(), "add remove", this.render);
+    this.listenTo(this.model.lists(), "change:ord", this.reSort);
+  },
+  
+  reSort: function(){
+    this.model.lists().sort();
   },
   
   render: function(){

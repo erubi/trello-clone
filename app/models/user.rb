@@ -31,9 +31,9 @@ class User < ActiveRecord::Base
     b1 = u1.boards.create(title: 'Apartment')
     b2 = u1.boards.create(title: 'Work')
 
-    l1 = b1.lists.create(title: 'todo')
-    l2 = b1.lists.create(title: 'doing')
-    l3 = b1.lists.create(title: 'done')
+    l1 = b1.lists.create(title: 'todo', ord: 0)
+    l2 = b1.lists.create(title: 'doing', ord: 1)
+    l3 = b1.lists.create(title: 'done', ord: 2)
 
     c1 = l3.cards.create(title: 'clean', description: 'clean all the things')
     c2 = l2.cards.create(title: 'organize', description: 'organize all the things')

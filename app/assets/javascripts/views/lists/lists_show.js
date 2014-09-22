@@ -10,7 +10,12 @@ TrelloClone.Views.ListsShow = Backbone.View.extend({
     this.cards = this.model.cards();
     // this.listenTo(this.model, "sync", this.render);
     this.listenTo(this.model.cards(), "add remove", this.render);
+    this.listenTo(this.model.cards(), "change:ord", this.reSort);
     this._subViews = [];
+  },
+  
+  reSort: function(){
+    this.cards.sort();
   },
   
   events: {
