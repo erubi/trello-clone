@@ -12,6 +12,7 @@ gem 'sqlite3'
 gem 'uglifier', '>= 1.3.0'
 gem 'bourbon'
 gem 'neat'
+gem 'pg'
 
 group :doc do
   gem 'sdoc', require: false
