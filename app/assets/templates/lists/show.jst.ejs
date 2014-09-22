@@ -29,24 +29,28 @@
         var newListId = newList.attr("list-id");
         var oldListId = oldList.attr("list-id");
         
-        if (oldListId != newListId){
+        // http://bugs.jqueryui.com/ticket/4872#comment:2
+        if (this === ui.item.parent()[0]) {
+          if (oldListId != newListId){
           
-          var list_id = newList.attr("list-id");
-          $(ui.item).trigger('switchList', list_id);
+            var list_id = newList.attr("list-id");
+            $(ui.item).trigger('switchList', list_id);
           
-          $(oldList).find(".cards-show-el").each(function(index){
-            $(this).trigger('drop', index);
-          })
+            $(oldList).find(".cards-show-el").each(function(index){
+              $(this).trigger('drop', index);
+            })
           
-          $(newList).find(".cards-show-el").each(function(index){
-            $(this).trigger('drop', index);
-          })
+            $(newList).find(".cards-show-el").each(function(index){
+              $(this).trigger('drop', index);
+            })
           
-        } else {
-          $(oldList).find(".cards-show-el").each(function(index){
-            $(this).trigger('drop', index);
-          })
+          } else {
+            $(oldList).find(".cards-show-el").each(function(index){
+              $(this).trigger('drop', index);
+            })
+          }
         }
+     
         
       }
     })
